@@ -1,0 +1,81 @@
+:root {
+    --background-color: #272932;
+    --high-contrast: #FAE8EB;
+    --accent-one: #00A7E1;
+    --accent-two: #FF9B42;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container {
+    width: 50%;
+    max-width: 740px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    background-color: var(--high-contrast);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0px;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section input {
+    padding: 8px 12px;
+}
+
+.section-container {
+    display: flex;
+    gap: 64px;
+}
+
+form .submit {
+    font-size: 1.1rem;
+    background-color: var(--accent-two);
+    margin-top: 48px;
+    padding: 12px 48px;
+}
+
+form .submit:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+#email:invalid,
+#paddword:invalid,
+#confirmation:invalid,
+#country:invalid,
+#postcode:invalid {
+    border-color: var(--accent-two);
+}
