@@ -71,11 +71,3 @@ form .submit:hover {
     cursor: pointer;
     opacity: 0.85;
 }
-
-#email:invalid,
-#paddword:invalid,
-#confirmation:invalid,
-#country:invalid,
-#postcode:invalid {
-    border-color: var(--accent-two);
-}

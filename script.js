@@ -29,6 +29,14 @@ confirmation.addEventListener("input", () => {
     }
 })
 
+country.addEventListener("input", () => {
+    if (country.validity.valueMissing) {
+        country.setCustomValidity("Please enter the name of a country.")
+    } else {
+        country.setCustomValidity("");
+    }
+})
+
 postcode.addEventListener("input", () => {
     if (postcode.validity.patternMismatch) {
         postcode.setCustomValidity("Postcodes must contain 4 digits.");
@@ -42,5 +50,8 @@ submit.addEventListener("click", (e) => {
     email.reportValidity();
     password.reportValidity();
     confirmation.reportValidity();
+    country.reportValidity();
     postcode.reportValidity();
+
+    // console.log(email.validity);
 })
