@@ -55,9 +55,13 @@ form h1 {
     padding: 8px 12px;
 }
 
+.form-section input.error {
+    border-color: var(--accent-two);
+}
+
 .section-container {
     display: flex;
-    gap: 64px;
+    justify-content: space-between;
 }
 
 form .submit {
@@ -70,4 +74,15 @@ form .submit {
 form .submit:hover {
     cursor: pointer;
     opacity: 0.85;
+}
+
+@media only screen and (max-width: 1350px) {
+    .section-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .section-container .form-section input {
+        width: 60%;
+    }
 }
